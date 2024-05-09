@@ -3,7 +3,7 @@ import { FaBars, FaFacebook, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } fro
 
 const Navbar = () => {
   return (
-    <Flex as="nav" w="full" bg="gray.900" color="white" py={2} px={4} align="center" justify="space-between" position="sticky" top={0} zIndex={10}>
+    <Flex as="nav" w="full" bg="background.50" color="text.base" py={4} px={6} align="center" justify="space-between" position="sticky" top={0} zIndex={10}>
       <IconButton icon={<FaBars />} variant="outline" aria-label="Open Menu" />
       <Stack direction="row" spacing={4}>
         <Link href="#hero" p={2} _hover={{ color: "blue.300" }}>
@@ -32,7 +32,7 @@ const HeroSection = () => {
           Empower Your Workflow
         </Heading>
         <Text fontSize="xl">Revolutionize your daily tasks with cutting-edge technology.</Text>
-        <Button colorScheme="blue" size="lg">
+        <Button backgroundColor="accent.500" color="white" size="lg" _hover={{ bg: "accent.600" }}>
           Get Started
         </Button>
       </VStack>
@@ -93,23 +93,23 @@ const CTASection = () => {
 
 const Footer = () => {
   return (
-    <Box bg="gray.900" color="gray.200" p={5}>
-      <Container maxW="container.xl" d="flex" justifyContent="space-between" alignItems="center">
-        <Text>&copy; 2023 Your Company</Text>
-        <Stack direction="row" spacing={4}>
-          <Link href="https://facebook.com" isExternal>
+    <Box bg="background.100" color="text.light" p={6}>
+      <Container maxW="container.xl" d="flex" flexDirection="column" alignItems="center">
+        <Text>&copy; 2024 Your Company</Text>
+        <Stack direction="row" spacing={6} mt={4}>
+          <Link href="https://facebook.com" isExternal color="accent.500">
             <FaFacebook />
           </Link>
-          <Link href="https://twitter.com" isExternal>
+          <Link href="https://twitter.com" isExternal color="accent.500">
             <FaTwitter />
           </Link>
-          <Link href="https://instagram.com" isExternal>
+          <Link href="https://instagram.com" isExternal color="accent.500">
             <FaInstagram />
           </Link>
-          <Link href="https://linkedin.com" isExternal>
+          <Link href="https://linkedin.com" isExternal color="accent.500">
             <FaLinkedin />
           </Link>
-          <Link href="https://youtube.com" isExternal>
+          <Link href="https://youtube.com" isExternal color="accent.500">
             <FaYoutube />
           </Link>
         </Stack>
